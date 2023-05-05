@@ -16,6 +16,8 @@ public class HotelManagementRepo {
     Map<String, Booking> bookingDB = new HashMap<>();
 
 
+
+
     public void addHotel(Hotel hotel){
 
             hotelDB.put(hotel.getHotelName(),hotel);

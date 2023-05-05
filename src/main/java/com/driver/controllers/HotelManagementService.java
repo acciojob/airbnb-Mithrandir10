@@ -12,8 +12,8 @@ import java.util.*;
 @Service
 public class HotelManagementService {
 
-    @Autowired
-    HotelManagementRepo hotelRepo;
+
+    HotelManagementRepo hotelRepo=new HotelManagementRepo();
 
     public boolean addHotel(Hotel hotel){
         if(hotel!=null && hotel.getHotelName()!="" && hotelRepo.checkHotel(hotel.getHotelName())==false){
