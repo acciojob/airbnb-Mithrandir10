@@ -16,7 +16,7 @@ public class HotelManagementService {
     HotelManagementRepo hotelRepo=new HotelManagementRepo();
 
     public boolean addHotel(Hotel hotel){
-        if(hotel!=null && hotel.getHotelName()!="" && hotelRepo.checkHotel(hotel.getHotelName())==false){
+        if(hotel!=null && hotel.getHotelName()!=null  && hotelRepo.checkHotel(hotel.getHotelName())==false){
             hotelRepo.addHotel(hotel);
             return true;
         }

@@ -73,7 +73,7 @@ public class HotelManagementController {
         //in other case return total amount paid
         int res=hotelSerivce.bookARoom(booking);
         
-        return 0;
+        return res;
     }
     
     @GetMapping("/get-bookings-by-a-person/{aadharCard}")
@@ -92,7 +92,7 @@ public class HotelManagementController {
         //return the final updated List of facilities and also update that in your hotelDb
         //Note that newFacilities can also have duplicate facilities possible
         Hotel h=hotelSerivce.updateFacilites(newFacilities,hotelName);
-        return null;
+        return h;
     }
 
 }
